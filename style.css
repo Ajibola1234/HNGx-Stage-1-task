@@ -1,0 +1,41 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+#container1 {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: center;
+}
+
+#slackUsername{
+    font-size: 24px;
+    margin: 10px 0;
+    color: #333;
+}
+#slack-display-image {
+    max-width: 100px;
+    border-radius: 10%
+}
+
+P{
+    font-size: 16px;
+    margin: 10px 0;
+    color: #666;
+}
+
+#myTrack{
+    font-weight: bold;
+}
+
+#github a{
+    text-decoration: none;
+    color: #0077b5;
+}
+

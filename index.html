@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Data Attributes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container1">
+      <h1 id="slackUsername">Alade Ajibola Damilola</h1>
+      <img
+        src="ajibola.jpg"
+        alt="Alade Ajibola Damilola"
+        id="slack-display-image"
+        data-testid="slackDisplayImage"
+      />
+      <p data-testid="currentDayOfTheWeek"></p>
+      <p data-testid="currentUTCTime"></p>
+      <p id="myTrack" data-testid="myTrack">Frontend</p>
+      <p data-testid="githubURL">
+        <a id="githubURL" href="https://github.com/Ajibola1234/HNGx"
+          >GitHub Repository</a
+        >
+      </p>
+    </div>
+
+    <script>
+      // JavaScript for updating the current day of the week
+      function updateCurrentDayOfTheWeek() {
+        const daysOfWeek = [
+          "Sunday",
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+        ];
+        const today = new Date();
+        const dayOfWeek = daysOfWeek[today.getUTCDay()];
+        document.querySelector(
+          '[data-testid="currentDayOfTheWeek"]'
+        ).textContent = `Current Day: ${dayOfWeek}`;
+      }
+
+      // JavaScript for updating the current UTC time in milliseconds
+      function updateCurrentUTCTime() {
+        const currentTime = new Date().getTime();
+        document.querySelector(
+          '[data-testid="currentUTCTime"]'
+        ).textContent = `Current UTC Time: ${currentTime} milliseconds`;
+      }
+
+      // Initial function calls
+      updateCurrentDayOfTheWeek();
+      updateCurrentUTCTime();
+
+      // Update the current day of the week and UTC time every 1 second
+      setInterval(() => {
+        updateCurrentDayOfTheWeek();
+        updateCurrentUTCTime();
+      }, 1000);
+    </script>
+  </body>
+</html>
